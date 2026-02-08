@@ -1,37 +1,73 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# MetaChecker
+
+A free, open-source website metadata and SEO analysis tool built with Next.js. Analyze any URL to inspect metadata, preview social media cards, and generate AI-powered SEO suggestions.
+
+## Features
+
+### Metadata Inspector
+
+Paste any URL and get a complete breakdown of its metadata:
+
+- **Basic SEO** — Title, description, keywords, author, theme color
+- **Open Graph** — All `og:` properties including image dimensions, video, and audio
+- **Twitter Cards** — Card type, title, description, image, site, and creator
+- **Facebook** — App ID, pages, domain verification
+- **Discord & Slack** — Platform-specific link previews
+- **Technical SEO** — Canonical URL, robots directives, viewport, charset, language, manifest, favicons
+- **Article Metadata** — Published/modified time, author, section, tags
+- **Sitemap & Robots** — Detection of sitemap.xml and robots.txt with content display
+
+### Social Media Preview
+
+See exactly how your page appears when shared on:
+
+- Facebook / Open Graph
+- X (Twitter)
+- Discord
+- Slack
+
+### AI SEO Generator
+
+Powered by Google Gemini, generate optimized metadata for any page:
+
+- **From URL** — Analyze existing metadata and generate improved versions
+- **From Prompt** — Describe your page and get complete metadata generated from scratch
+- AI suggests better titles, descriptions, Open Graph tags, and Twitter Cards
+- Results displayed in the same dashboard format for easy comparison
+
+## Tech Stack
+
+- **Framework** — Next.js 16 (App Router)
+- **Language** — TypeScript
+- **Styling** — Tailwind CSS v4, Radix UI, CVA
+- **State** — TanStack React Query
+- **AI** — Google Gemini (gemini-2.5-flash)
+- **HTML Parsing** — Cheerio
+- **Animations** — Motion (Framer Motion)
+- **Architecture** — [Feature-Sliced Design](https://feature-sliced.design/)
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
-npm run dev
-# or
-yarn dev
-# or
+# Install dependencies
+pnpm install
+
+# Set up environment variables
+cp .env.example .env.local
+# Add your Gemini API key to .env.local
+
+# Run development server
 pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to see the app.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Environment Variables
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Variable | Description |
+|----------|-------------|
+| `GEMINI_API_KEY` | Google Gemini API key for AI SEO generation |
 
-## Learn More
+## Project Structure
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-# seo-analysis
+See [ARCHITECTURE.md](./ARCHITECTURE.md) for the full Feature-Sliced Design breakdown.
