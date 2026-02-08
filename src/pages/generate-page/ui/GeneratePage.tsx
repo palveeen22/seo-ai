@@ -1,6 +1,6 @@
 'use client'
 
-import { Badge, Skeleton } from '@/shared/ui'
+import { BackButton, Badge, Skeleton } from '@/shared/ui'
 import { GenerateForm, useGenerateMutation } from '@/features/generate-metadata'
 import { MetadataDashboard } from '@/widgets/metadata-dashboard'
 import { Sparkles } from 'lucide-react'
@@ -15,6 +15,7 @@ export function GeneratePage() {
   return (
     <div className="min-h-screen bg-background">
       <div className="mx-auto max-w-4xl px-4 py-16">
+        <BackButton />
         <header className="mb-10 text-center">
           <div className="mb-3 flex items-center justify-center gap-2">
             <Badge variant="secondary" className="gap-1.5 px-3 py-1 text-sm">

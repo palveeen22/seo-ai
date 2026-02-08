@@ -1,3 +1,4 @@
+export { BackButton } from "./back-button"
 export { CopyAllButton } from "./copy-all-button"
 export { CopyButton } from "./copy-button"
 export { ImagePreview } from "./image-preview"
