@@ -61,6 +61,7 @@ shared/
     ├── separator.tsx         # Radix Separator
     ├── skeleton.tsx          # Loading placeholder
     ├── sonner.tsx            # Toast notifications
+    ├── back-button.tsx       # Back navigation link button
     ├── copy-button.tsx       # Copy-to-clipboard button
     ├── copy-all-button.tsx   # Copy metadata as JSON
     └── image-preview.tsx     # Next.js Image with fallback
@@ -72,9 +73,17 @@ Domain-specific models and their UI representations.
 
 ```
 entities/
+├── generate/
+│   └── model/
+│       └── constants.ts           # PROMPT_EXAMPLES — categorized prompt suggestions
+│
+├── homepage/
+│   └── model/
+│       └── constants.ts           # features, steps, metadataChecks, benefits
+│
 └── metadata/
     ├── api/
-    │   └── metadata-api.ts       # checkMetadata(url) — client API call
+    │   └── metadata-api.ts        # checkMetadata(url) — client API call
     └── ui/
         ├── metadata-field.tsx     # Single metadata field display
         ├── metadata-grid.tsx      # 2-column responsive grid layout
@@ -119,6 +128,11 @@ widgets/
 │   └── ui/
 │       └── metadata-dashboard.tsx   # 4-tab dashboard (Overview, Social, Technical, Sitemap)
 │
+|
+├── footer/
+│   └── ui/
+│       └── Footer.tsx              # App Footer
+|
 └── navbar/
     └── ui/
         └── Navbar.tsx               # App navigation bar
